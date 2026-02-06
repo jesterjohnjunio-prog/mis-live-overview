@@ -327,7 +327,7 @@
         /* Overall Summary Stats */
         .summary-stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             margin-top: 30px;
         }
@@ -354,7 +354,6 @@
         .summary-stat-value.tickets { color: #2c5282; }
         .summary-stat-value.rating { color: #38a169; }
         .summary-stat-value.response { color: #e53e3e; }
-        .summary-stat-value.personnel { color: #805ad5; }
         
         /* Performance Chart */
         .performance-section {
@@ -755,7 +754,7 @@
         </div>
         
         <div class="dashboard-footer">
-            <p><strong>MIS Services Live Overview</strong> | Data fetched directly from Google Sheets</p>
+            <p><strong>MIS Services Live Overview Dashboard</strong> | Data fetched directly from Google Sheets</p>
             <p>Sheets automatically update every 5 minutes when changes are detected</p>
         </div>
     </div>
@@ -1251,8 +1250,7 @@
             let totalTickets = 0;
             let totalWeightedPerformance = 0;
             let totalWeightedResponseTime = 0;
-            let totalPersonnel = 0;
-            let totalServicesWithData = 0;
+            // Removed: let totalPersonnel = 0;
             
             for (const [serviceId, serviceData] of Object.entries(servicesData)) {
                 const analysis = serviceData.data;
@@ -1261,8 +1259,7 @@
                     totalTickets += analysis.totalTickets;
                     totalWeightedPerformance += analysis.avgPerformance * analysis.totalTickets;
                     totalWeightedResponseTime += analysis.avgResponseTime * analysis.totalTickets;
-                    totalPersonnel += analysis.personnelCount;
-                    totalServicesWithData++;
+                    // Removed: totalPersonnel += analysis.personnelCount;
                 }
             }
             
@@ -1279,8 +1276,7 @@
                 document.getElementById('avgRating').textContent = '0.0';
                 document.getElementById('avgResponse').textContent = '0.0h';
             }
-            
-            document.getElementById('totalPersonnel').textContent = totalPersonnel;
+            // Removed: document.getElementById('totalPersonnel').textContent = totalPersonnel;
         }
         
         // Update service status UI
@@ -1565,8 +1561,4 @@
         }
     </script>
 </body>
-
 </html>
-
-
-
