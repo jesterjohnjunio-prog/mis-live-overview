@@ -16,7 +16,7 @@
         }
         
         body { 
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            background: #f9fafb;
             color: #333;
             padding: 20px;
             min-height: 100vh;
@@ -25,9 +25,7 @@
         .dashboard-container {
             max-width: 1800px;
             margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            background: transparent;
             overflow: hidden;
         }
         
@@ -36,6 +34,8 @@
             color: white;
             padding: 30px;
             text-align: center;
+            border-radius: 15px;
+            margin-bottom: 20px;
         }
         
         .dashboard-header h1 {
@@ -85,8 +85,7 @@
         /* Overview Section */
         .overview-summary {
             padding: 30px;
-            background: #f8fafc;
-            border-bottom: 2px solid #e2e8f0;
+            background: transparent;
         }
         
         .overview-title {
@@ -186,7 +185,7 @@
             background: white;
             border-radius: 15px;
             padding: 25px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
             border-top: 5px solid;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
@@ -194,7 +193,7 @@
         
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
         }
         
         .service-card.ict {
@@ -337,7 +336,7 @@
             padding: 20px;
             background: white;
             border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
         }
         
         .summary-stat-value {
@@ -373,8 +372,7 @@
             background: white;
             border-radius: 15px;
             padding: 25px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
         
         .chart-container {
@@ -413,6 +411,9 @@
             padding: 60px;
             color: #64748b;
             text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
         
         .loading-spinner {
@@ -438,6 +439,7 @@
             background: #fed7d7;
             border-radius: 10px;
             margin-top: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
         
         /* Last Updated */
@@ -446,8 +448,7 @@
             padding: 15px;
             color: #94a3b8;
             font-size: 0.9rem;
-            border-top: 1px solid #e2e8f0;
-            background: #f8fafc;
+            margin-top: 20px;
         }
         
         /* Footer */
@@ -456,8 +457,7 @@
             padding: 25px;
             color: #94a3b8;
             font-size: 0.9rem;
-            border-top: 1px solid #e2e8f0;
-            background: #f8fafc;
+            margin-top: 20px;
         }
         
         /* Responsive Design */
@@ -1562,4 +1562,3 @@
     </script>
 </body>
 </html>
-
